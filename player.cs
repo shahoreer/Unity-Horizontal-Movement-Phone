@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class player : MonoBehaviour
@@ -19,31 +17,18 @@ public class player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             float xclickpos = Input.mousePosition.x;
-            if (xclickpos>half_scrn_x)
-            {
-                move(true);
-            }
-            else
-            {
-                move(false);
-            }
+            if (xclickpos>half_scrn_x) move(true);
+            else move(false);
         }
-
     }
 
 
     void move(bool right)
     {
-        if (right)
-        {
-            xpos = transform.position.x + 0.5f;
-        }
-        else
-        {
-            xpos = transform.position.x - 0.5f;
-        }
+        if (right) xpos = transform.position.x + 0.5f;
+        else xpos = transform.position.x - 0.5f;
 
-        ypos=transform.position.y;
+        ypos =transform.position.y;
         xpos = Mathf.Clamp(xpos, -1.8f, 1.8f);
         transform.position = new Vector3(xpos, ypos, 0);
     }
