@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-
     float xpos;
     float ypos;
     float half_scrn_x;
@@ -20,7 +19,6 @@ public class player : MonoBehaviour
             else move(false);
         }
     }
-
 
     void move(bool right)
     {
