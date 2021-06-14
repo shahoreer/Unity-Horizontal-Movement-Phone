@@ -16,8 +16,7 @@ public class player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            float xclickpos = Input.mousePosition.x;
-            if (xclickpos>half_scrn_x) move(true);
+            if (Input.mousePosition.x > half_scrn_x) move(true);
             else move(false);
         }
     }
